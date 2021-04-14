@@ -6,26 +6,32 @@ html {
   color: antiquewhite;
 }
 body {
-  background-image: url(Background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(Background.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
-header {
+.title {
   font-family: "dancing script";
   text-align: center;
   font-weight: bolder;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  font-size: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  font-size: 4em;
   letter-spacing: 0.3em;
 }
 
-p{
-    font-size: 0.9;
+.subtitle {
+  font-size: 3em;
+  font-family: "dancing script";
+  text-align: center;
+  font-weight: normal;
+  word-spacing: 0.3em;
 }
 .keys {
+  margin-top: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,15 +40,14 @@ p{
   margin-right: 30px;
   margin-top: 6em;
   padding: 2em;
-  border: 1px solid white;
   background: transparent rgba(0, 0, 0, 1);
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.07s ease;
+  text-shadow: 0 0 0.5rem black;
+  border: 1px solid white;
 }
-.key:hover {
-  border: 3px solid orange;
-}
+
 kbd {
   font-size: 2em;
   top: 10%;
@@ -57,4 +62,9 @@ kbd {
   letter-spacing: 0.1rem;
   color: orange;
   margin-top: 1em;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
 }
